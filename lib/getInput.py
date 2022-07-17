@@ -12,5 +12,6 @@ class color:
 
 def getInput() -> str:
     inputVAL = """"""
-    input(color.BOLD + color.GREEN + "( ? ) " + color.CYAN + "What was the error?\n\t" + color.RED)
+    print(color.YELLOW + "( i ) To Paste press CTRL+V ( windows ) or CTRL+ALT+V ( linux )")
+    input(color.BOLD + color.GREEN + "\n( ? ) " + color.CYAN + "What was the error?\n\t" + color.RED)
     print(color.END)

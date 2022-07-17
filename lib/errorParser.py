@@ -2,6 +2,7 @@ ERROR_MSG = """  File "d:\Desktop\ErrorVete\Error-Vete\__test.py", line 2, in <m
     print("Total number of days: " + days)
  TypeError: can only concatenate str (not "int") to str"""
 
+from ERROR_MESSAGES import *
 
 class EVParser:
     def __init__(self):
@@ -12,9 +13,9 @@ class EVParser:
 
     def removeCharType(char, data):
         try:
-            import re
+            import refsa
         except ImportError:
-            print("There was an error importing the 'RE' library")
+            print(ERROR_MSG.IMPORT_ERROR)
         return re.sub(char,"", data)
 
 
