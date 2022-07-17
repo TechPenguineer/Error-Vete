@@ -10,12 +10,19 @@ class EVParser:
         self.statement
         self.typeError
 
-    def removeCommaSep(data):
-        
+    def removeCharType(char, data):
+        try:
+            import re
+        except ImportError:
+            print("There was an error importing the 'RE' library")
+        return re.sub(char,"", data)
+
+
     def parseErrorMessage(msg, self):
         data = msg.split()
-        self.errorLine = data[3]
-        self.fileLocation = data[1]
+        self.errorLine = EVParser.removeCharType(",", data[3] )
+        fl1 = EVParser.removeCharType('"', data[1] )
+        self.fileLocation = EVParser.removeCharType(',', fl1 )
         print("Error @:\n\nLine: " + self.errorLine + "\nOf File: " + self.fileLocation)
 
 
