@@ -1,3 +1,9 @@
+
+import sys
+
+from lib.STDOUT_cmds import flush_console
+from .ERROR_MESSAGES import ERROR_MSG
+
 class color:
    PURPLE = '\033[95m'
    CYAN = '\033[96m'
@@ -15,4 +21,6 @@ def getInput() -> str:
     print(color.YELLOW + "( i ) To Paste press CTRL+V ( windows ) or CTRL+ALT+V ( linux )")
     data = input(color.BOLD + color.GREEN + "\n( ? ) " + color.CYAN + "What was the error?\n\t" + color.RED)
     print(color.END)
+
+
     return data
